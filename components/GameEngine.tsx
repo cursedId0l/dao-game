@@ -363,7 +363,7 @@ export default function GameEngine() {
       {char.emoji && (
         <div
           className="absolute inset-x-0 flex items-center justify-center"
-          style={{ top: "40px", bottom: "38%" }}
+          style={{ top: "40px", bottom: "var(--dialogue-h)" }}
         >
           <div
             className={`text-7xl sm:text-8xl md:text-9xl p-5 rounded-2xl border ${char.border} ${char.bg}`}
@@ -378,7 +378,7 @@ export default function GameEngine() {
       {showChoices && scene.choices && (
         <div
           className="absolute inset-x-0 flex flex-col items-center gap-2 px-4 pb-2"
-          style={{ bottom: "38%" }}
+          style={{ bottom: "var(--dialogue-h)" }}
           onClick={(e) => e.stopPropagation()}
         >
           {scene.choices.map((choice, i) => (
@@ -410,7 +410,7 @@ export default function GameEngine() {
       {/* ── Dialogue Box ── */}
       <div
         className="absolute inset-x-0 bottom-0 bg-black/88 border-t border-emerald-500/15 backdrop-blur-sm cursor-pointer"
-        style={{ height: "38%" }}
+        style={{ height: "var(--dialogue-h)" }}
       >
         {char.name && (
           <div className="absolute -top-[22px] left-6">
