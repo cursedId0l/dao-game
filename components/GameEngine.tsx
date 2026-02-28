@@ -348,6 +348,15 @@ export default function GameEngine() {
         <span className="text-emerald-500/40 text-[10px] font-mono shrink-0 tabular-nums">
           {progress}%
         </span>
+        <a
+          href="https://cursedid0l.github.io/"
+          target="_blank"
+          rel="noopener noreferrer"
+          className="text-emerald-500/30 hover:text-emerald-500/60 text-[10px] font-mono tracking-widest shrink-0 transition-colors"
+          onClick={(e) => e.stopPropagation()}
+        >
+          by cursedid0l
+        </a>
       </div>
 
       {/* ── Portrait ── */}
