@@ -434,8 +434,19 @@ export default function GameEngine() {
         </div>
 
         {!isTyping && !scene.choices && scene.next && (
-          <div className="absolute bottom-5 right-6 text-emerald-400 text-sm font-mono animate-pulse tracking-widest">
-            ▼ ENTER TO CONTINUE&nbsp;&nbsp;·&nbsp;&nbsp;[⌫] BACK
+          <div className="absolute bottom-5 right-6 flex items-center gap-4 animate-pulse">
+            <button
+              onClick={(e) => { e.stopPropagation(); goBack(); }}
+              className="text-emerald-400/60 hover:text-emerald-400 text-sm font-mono tracking-widest transition-colors"
+            >
+              [⌫] BACK
+            </button>
+            <button
+              onClick={(e) => { e.stopPropagation(); goToScene(scene.next!); }}
+              className="text-emerald-400 hover:text-emerald-300 text-sm font-mono tracking-widest transition-colors"
+            >
+              ▼ ENTER TO CONTINUE
+            </button>
           </div>
         )}
       </div>
