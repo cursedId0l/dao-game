@@ -422,7 +422,7 @@ export default function GameEngine() {
           </div>
         )}
 
-        <div className="h-full px-6 pt-5 pb-8 overflow-hidden">
+        <div className="h-full px-6 pt-5 pb-8 overflow-y-auto">
           <p className="font-mono text-sm md:text-[15px] text-gray-200 whitespace-pre-line leading-relaxed">
             {displayedText}
             {isTyping && (
